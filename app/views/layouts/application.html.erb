@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
 <head>
+	<meta charset="utf-8" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <title>UsefulAffairs</title>
+	<meta name="title" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="wrapper">
+
+	<header id="header">
+        <strong>Header:</strong> 
+        <%= render 'layouts/header' %>
+        </header><!-- #header-->
 
 <%= yield %>
+   <section id="middle">
+        <aside id="sideLeft">
+        <strong>Left Sidebar:</strong> 
+        <%= render 'layouts/sideleft' %>
+        </aside><!-- #sideLeft -->
 
+	<aside id="sideRight">
+        <strong>Right Sidebar:</strong> 
+        <%= render 'layouts/sideright' %>
+        </aside><!-- #sideRight -->
+
+	</section><!-- #middle-->
+        
+
+</div><!-- #wrapper -->
+<footer id="footer">
+	<strong>Footer:</strong> Mus elit Morbi mus enim lacus at quis Nam eget morbi. Et semper urna urna non at cursus dolor vestibulum neque enim. Tellus interdum at laoreet laoreet lacinia lacinia sed Quisque justo quis. Hendrerit scelerisque lorem elit orci tempor tincidunt enim Phasellus dignissim tincidunt. Nunc vel et Sed nisl Vestibulum odio montes Aliquam volutpat pellentesque. Ut pede sagittis et quis nunc gravida porttitor ligula.
+</footer><!-- #footer -->
 </body>
 </html>

@@ -18,6 +18,7 @@ group :test, :development do
   gem 'launchy'
   gem 'factory_girl'
 end
+#gem 'builder', '3.0.0'
 # Use unicorn as the web server
 # gem 'unicorn'
 
