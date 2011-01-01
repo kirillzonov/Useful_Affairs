@@ -1,3 +1,19 @@
+UsefulAffairs::Application.routes.draw do
+  root :to => 'home#index'
+
+  resources :users
+  resource :session, :only => [:new, :create, :destroy]
+
+  match 'signup' => 'users#new', :as => :signup
+
+  match 'register' => 'users#create', :as => :register
+
+  match 'login' => 'sessions#new', :as => :login
+
+  match 'logout' => 'sessions#destroy', :as => :logout
+
+  match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
+end
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -10,6 +26,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    
+    when /register page/
+      '/signup'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
