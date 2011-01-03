@@ -1,4 +1,7 @@
 UsefulAffairs::Application.routes.draw do
+  resources :categories
+
+  resources :affairs
   root :to => 'home#index'
 
   resources :users
@@ -29,6 +32,9 @@ module NavigationHelpers
     
     when /register page/
       '/signup'
+
+    when /affair's creating page/
+      new_affair_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

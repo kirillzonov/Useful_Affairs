@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shortname:</b>
+  <%= @affair.shortname %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @affair.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @affair.user %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @affair.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_affair_path(@affair) %> |
+<%= link_to 'Back', affairs_path %>

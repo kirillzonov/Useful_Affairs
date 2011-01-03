@@ -1,4 +1,8 @@
 UsefulAffairs::Application.routes.draw do
+  resources :categories
+
+  resources :affairs
+
   root :to => 'home#index'
 
   resources :users

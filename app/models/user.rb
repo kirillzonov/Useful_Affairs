@@ -1,6 +1,8 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  has_many :affairs, :dependent => :destroy
+  has_many :categories, :dependent => :destroy
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken

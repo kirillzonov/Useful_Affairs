@@ -1,0 +1,29 @@
+<h1>Listing affairs</h1>
+
+<table>
+  <tr>
+    <th>Shortname</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @affairs.each do |affair| %>
+  <tr>
+    <td><%= affair.shortname %></td>
+    <td><%= affair.description %></td>
+    <td><%= affair.user %></td>
+    <td><%= affair.category %></td>
+    <td><%= link_to 'Show', affair %></td>
+    <td><%= link_to 'Edit', edit_affair_path(affair) %></td>
+    <td><%= link_to 'Destroy', affair, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Affair', new_affair_path %>
